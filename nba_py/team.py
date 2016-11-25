@@ -406,11 +406,14 @@ class TeamGameLogs:
     def __init__(self,
                  team_id,
                  season=CURRENT_SEASON,
-                 season_type=SeasonType.Default):
+                 season_type=SeasonType.Default,
+                 measure_type=MeasureType.Default):
         self.json = _get_json(endpoint=self._endpoint,
                               params={'TeamID': team_id,
                                       'Season': season,
-                                      'SeasonType': season_type})
+                                      'SeasonType': season_type,
+                                      'MeasureType': measure_type
+})
 
     def info(self):
         return _api_scrape(self.json, 0)
