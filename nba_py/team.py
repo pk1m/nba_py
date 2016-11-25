@@ -412,8 +412,7 @@ class TeamGameLogs:
                               params={'TeamID': team_id,
                                       'Season': season,
                                       'SeasonType': season_type,
-                                      'MeasureType': measure_type
-})
+                                      'MeasureType': measure_type})
 
     def info(self):
         return _api_scrape(self.json, 0)
